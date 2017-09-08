@@ -2,17 +2,18 @@
 #include <stdio.h>
 #include <string.h>
 int main(){
-	int n;
-	scanf("%d",&n);
-	bool a[n] = { true };
+	unsigned long long int n;
+	scanf("%llu",&n);
+	bool a[n+1];
 	memset(a,true,sizeof(a));
-	for(int i=2; i*i <= n; i++)
+	unsigned long long int i,j;
+	for(i=2; i*i <= n; i++)
 		if(a[i])
-			for(int j = i*i; j<=n; j += i)
+			for(j = i*2; j<=n; j += i)
 				a[j] = false;
-	for(int i=2;i<=n;i++)
+	for(i=2;i<=n;i++)
 		if(a[i])
-			printf("%d ",i );
+			printf("%llu ",i );
 	printf("\n");
 	return 0;
 }

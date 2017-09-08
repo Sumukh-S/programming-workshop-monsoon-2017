@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 int main(){
-	int n;
-	scanf("%d",&n);
-	int fact = 1;
+	unsigned long long int i, n;
+	scanf("%llu",&n);
+	unsigned long long int fact = 1;
 	for(i=1;i<=n;i++){
 		fact *= i;
 	}
-	printf("%d\n", fact);
+	printf("%llu\n", fact);
 }
